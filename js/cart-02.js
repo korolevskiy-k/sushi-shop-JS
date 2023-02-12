@@ -52,9 +52,13 @@ window.addEventListener('click', function(event) {
                                 </div>`;
             // Отобразим товар в корзине 
             // Метод позволяет вставить разметку в элемент
-            cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+            cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);                      
         }
         // Сброс счетчика после добавления в корзину
         card.querySelector('[data-counter]').innerText = 1;
+        // Удаляем плашку "Корзина пуста"
+        toggleCartStatus();  
+        // Пересчет корзины
+        calcCartPrice();
     }
 })

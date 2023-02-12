@@ -13,12 +13,21 @@ window.addEventListener('click', function(event) {
     if (event.target.dataset.action === 'plus') {        
         counter.innerText++;
     }
-
     if (event.target.dataset.action === 'minus') {        
         if (parseInt(counter.innerText) > 1) {
             counter.innerText--;
-        }  else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) == 1) {
+        } else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
             event.target.closest('.cart-item').remove();
+            // Удаляем плашку "Корзина пуста"
+            toggleCartStatus(); 
+            // Пересчет корзины для обнуления
+            calcCartPrice();
         }        
     }
+    // Проверяем клики в корзине
+    if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
+        calcCartPrice();
+    }
+
+
 })
