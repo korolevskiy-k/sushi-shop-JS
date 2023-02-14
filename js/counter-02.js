@@ -21,12 +21,12 @@ window.addEventListener('click', function(event) {
             // Удаляем плашку "Корзина пуста"
             toggleCartStatus(); 
             // Пересчет корзины для обнуления
-            calcCartPrice();
+            calcCartPriceAndDelivery();
         }        
     }
     // Проверяем клики в корзине
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
-        calcCartPrice();
+        calcCartPriceAndDelivery();
     }
 
 

@@ -24,10 +24,10 @@
 	<div class="container mb-5">
 		<div class="row">
 			<div class="col-md-8">
-				<div class="row">
+				<div class="row" id="products-container">
 
 					<!-- Ролл -->
-					<div class="col-md-6">
+					<!-- <div class="col-md-6">
 						<div class="card mb-4" data-id="01">
 							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
 							<div class="card-body text-center">
@@ -51,11 +51,11 @@
 
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- // Ролл -->
 
 					<!-- Ролл -->
-					<div class="col-md-6">
+					<!-- <div class="col-md-6">
 						<div class="card mb-4" data-id="02">
 							<img class="product-img" src="img/roll/california-tempura.jpg" alt="">
 							<div class="card-body text-center">
@@ -79,11 +79,11 @@
 
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- // Ролл -->
 
 					<!-- Ролл -->
-					<div class="col-md-6">
+					<!-- <div class="col-md-6">
 						<div class="card mb-4" data-id="03">
 							<img class="product-img" src="img/roll/zapech-california.jpg" alt="">
 							<div class="card-body text-center">
@@ -108,11 +108,11 @@
 
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- // Ролл -->
 
 					<!-- Ролл -->
-					<div class="col-md-6">
+					<!-- <div class="col-md-6">
 						<div class="card mb-4" data-id="04">
 							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
 							<div class="card-body text-center">
@@ -139,7 +139,7 @@
 
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- // Ролл -->
 
 				</div>
@@ -161,7 +161,11 @@
 
 						<!-- Стоимость заказа -->
 						<div class="cart-total">
-							<p><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span> </p>
+							<p data-cart-delivery class="none">
+								<span class="h5">Доставка:</span> 
+								<span class="delivery-cost free">бесплатно</span> <br>
+								<span class="small">Бесплатно при заказе от 600 ₽</span>
+							</p>
 							<p><span class="h5">Итого:</span> <span class="total-price">0</span> <span class="rouble">₽</span></p>
 						</div>
 						<!-- // Стоимость заказа -->
@@ -189,6 +193,7 @@
 	</div>
 
 	<!-- Подключаем скрипты -->
+	<script src="/js/renderProducts.js"></script>
 	<script src="/js/calcCartPrice.js"></script>
 	<script src="/js/toggleCartStatus.js"></script>
 	<script src="/js/counter-02.js"></script>

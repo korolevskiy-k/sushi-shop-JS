@@ -59,6 +59,6 @@ window.addEventListener('click', function(event) {
         // Удаляем плашку "Корзина пуста"
         toggleCartStatus();  
         // Пересчет корзины
-        calcCartPrice();
+        calcCartPriceAndDelivery();
     }
 })
